@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+
+        <style>
+            input {
+            width: "200px";
+            border: 2px solid #E25052;
+            border-radius: 7px;
+            background-color: #2B0413;
+            box-shadow: Opx 0px 15px #E25D52;
+            padding: 10px;
+            color: white;
+            margin-bottom: 5px;
+            }
+
+            input:focus {
+                outline: none !important;
+            }
+
+            form {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                height: 200px;
+            }
+
+            .bar_container {
+                width: 200px;
+                height: 5px;
+                display: flex;
+                flex-direction: row;
+                margin: auto;
+            }
+
+            #password-length {
+                height: 100%;
+                border-radius: 25px;
+                box-shadow: 0px 0px 15px black;
+            }
+
+            .bad {
+                width: 34%;
+                background-color: red;
+            }
+
+            .good {
+                width: 68%;
+                background-color: orange;
+            }
+
+            .perfect {
+                width: 100%;
+                background-color: green;
+            }
+        </style>
+
+        <script>
+            var password = prompt("Introduzca la que quiere que sea su contraseña");
+
+            function password_length(event) {
+                const bar = document.getElementById('password-length');
+
+                var length = event.target.value.length;
+                bar.className = ""
+
+                if (length < 5) {
+                    bar.classList.add('bad');
+                } else if (length < 10) {
+                    bar.classList.add('good');
+                } else if (length >= 10 ) {
+                    bar.classList.add('perfect');
+                }
+            }
+
+            function password_ckeck() {
+                var pswd = document.getElementById("pswd").value;
+                if(pswd == password) {
+                    document.getElementById("frm").innerHTML = "<h1>Contraseña correcta!</h1>"
+                } else {
+                    document.getElementById("msg").innerHTML = "Siga intentandolo"
+                }
+            }
+        </script>
+
+    </head>
+    <body>
+        <form action="" id="frm">
+            <input type="password" id="pswd" onkeyup="password_length(event);">
+            <div class="bar_container">
+                <div id="password-length"></div>
+            </div>
+            <input type="button" value="Confirm" onclick="password_ckeck()">
+            <p id="msg"></p>
+        </form>
+    </body>
+</html>

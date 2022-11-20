@@ -1,0 +1,51 @@
+.container {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.container h1{
+    color: rgb(30, 14, 130);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+
+.container .card {
+    border: 10px solid black;
+    border-radius: 10px;
+    background-color: rgb(228, 181, 64);
+    width: 450px;
+    height: 300px;
+    padding: 10px;
+    margin: auto;
+}
+
+.card .card-header {
+    box-shadow: 5px 5px 5px black;
+    font-size: 22px;
+    font-family: fantasy;
+    background-color: rgb(255, 255, 255);
+}
+
+.card .card-body {
+    border: 3px solid black;
+    border-radius: 2px;
+    margin: auto;
+    width: 380px;
+    height: 50px;
+    padding-top: 30px;
+    background-color: rgb(255, 255, 255);
+}
+
+.card .card-footer {
+    border: 3px solid black;
+    border-radius: 2px;
+    margin: auto;
+    width: 380px;
+    height: 90px;
+    box-shadow: 5px 5px 5px black;
+    font-size: 22px;
+    background-color: rgb(255, 255, 255);
+}

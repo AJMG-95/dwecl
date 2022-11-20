@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>MicroTranslator</h2>
+
+    (casa, mesa, perro, gato): <input type="text" id="wrd">
+
+    <input type="button" id="button" value="Traducir" onClick="translate()">
+
+    <h3 id="mnng"></h3>
+
+    <script>
+        var dic = { 'casa': "House", 'mesa': "Table", 'perro': "Dog", 'gato': "Cat" };
+
+        function translate() {
+            var wrd = document.getElementById("wrd").value;
+            document.getElementById("mnng").innerHTML = dic[wrd];
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lietarles</title>
+</head>
+
+<body>
+    <h2>Muestra Literales del 1 al 5</h2>
+
+    Introduzca el dígito aquí: <input type="text" id="nmbr">
+
+    <input type="button" id="button" value="Mostrar" onClick="show()">
+
+    <h3 id="plc"></h3>
+
+    <script>
+
+        function show() {
+            var literales = { 1: "Uno", 2: "Dos", 3: "Tres", 4: "Cuatro", 5: "Cinco" };
+            var npt = document.getElementById("nmbr").value;
+            if (npt > 0 && npt <= 5) {
+                document.getElementById("plc").innerHTML = literales[npt];
+            } else {
+                alert("El valor introducido no es correcto.");
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

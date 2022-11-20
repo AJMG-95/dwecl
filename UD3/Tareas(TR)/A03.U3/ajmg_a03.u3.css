@@ -1,0 +1,19 @@
+table {
+    background: linear-gradient(rgb(202, 182, 228), white, rgb(202, 182, 228));
+    border: 2px solid #030003;
+    border-radius: 6px;
+    padding: 8px 24px;
+    cursor: pointer;
+    height: 20px;
+    font-size: 18px;
+    box-shadow: 0 0 4px #999;
+    background-position: center;
+    transition: background 0.2s;
+}
+
+img {
+    height: 200px;
+    width: 300px;
+    padding: 24px ;
+
+}

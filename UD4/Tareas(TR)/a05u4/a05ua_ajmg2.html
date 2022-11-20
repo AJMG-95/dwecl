@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="a05u4_ajmg.css">
+    <title>Document</title>
+</head>
+<body onload="onLoadResultPage()"">
+    <div class="overview">
+        <div class="table">
+            <div class="thead"></div>
+            <div class="tbody">
+                <div class="row">
+                    <div class="col">
+                        <h4>Todas las palabras ingresadas por el usuario:</h4>
+                        <p id="inputlist"></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h4>Todas las palabras colocadas al revés:</h4>
+                        <p id="reverseinput" ></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h4>La primera palabra ingresada por el usuario:</h4>
+                        <p id="firstword"></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h4>La última palabra ingresada por el usuario:</h4>
+                        <p id="lastword"></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h4>El número de palabras ingresadas por el usuario:</h4>
+                        <p id="wordscount"></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h4>Las palabras ordenadas de la 'a' a la 'z':</h4>
+                        <p id="orderedlist"></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h4>Las palabras Ordenadas de la 'z' a la 'a':</h4>
+                        <p id="reversedorderedlist"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button onclick="cleanLocalStorage()"><a href="a05u4_ajmg.html">Regresar</a></button>
+    </div>
+    <script Languaje="javascript" src="a05u4_ajmg.js">    </script>
+</body>
+</html>

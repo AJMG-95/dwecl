@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="number" id="npt" onkeyup="groupKind()" onclick="groupKind()">
+    <p id="res"></p>
+
+    <script>
+        function groupKind() {
+            var musicians = document.getElementById('npt').value;
+            var r;
+            if (musicians != "" && !isNaN(musicians)) {
+                switch (musicians) {
+                    case '0':
+                        r = "not a group";
+                        break;
+                    case '1':
+                        r = "solo";
+                        break;
+                    case '2':
+                        r = "duet";
+                        break;
+                    case '3':
+                        r = "trio";
+                        break;
+                    case '4':
+                        r = "quartet";
+                        break;
+                    default:
+                        r = "thes is a large group";
+                }
+                document.getElementById("res").innerHTML = r;
+            } else {
+                document.getElementById("res").innerHTML = "";
+            }
+        }
+    </script>
+</body>
+
+</html>

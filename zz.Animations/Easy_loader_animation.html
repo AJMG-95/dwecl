@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+
+        <style>
+            .container {
+
+            }
+
+            .rotation_div {
+                width: 45px;
+                height: 45px;
+                border-radius: 90px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                animation: coin_spin1 1s linear infinite;
+                margin: 5px;
+            }
+
+            #rotation1 {
+                float: left;
+                background: #F1C293;
+            }
+
+            #rotation2 {
+                float: left;
+                background: #9884F9;
+            }
+
+            #rotation3 {
+                float: left;
+                background: #C2BEDB;
+
+            }
+
+            @keyframes coin_spin1 {
+                50% {
+                    transform: rotateY(90deg);
+                }
+
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="container">
+            <div id="rotation1" class="rotation_div">
+            </div>
+
+            <div id="rotation2" class="rotation_div">
+            </div>
+
+            <div id="rotation3" class="rotation_div">
+            </div>
+        </div>
+
+    </body>
+</html>

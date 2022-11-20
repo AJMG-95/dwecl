@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div align="center">
+        <table align="center">
+            <thead align="center">
+                <tr>
+                    <th align="center" colspan="3">
+                        <h1>Introduzca la información solicitada</h1>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="3">
+                        <p id="text"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="inputsArea">
+                        <input type="text" id="alumname" placeholder="Nombre del alumno">
+                        <input type="text" id="alumnNote1" placeholder="Nota Modulo 1">
+                        <input type="text" id="alumnNote2" placeholder="Nota Modulo 2">
+                        <input type="text" id="alumnNote3" placeholder="Nota Modulo 3">
+
+                    </td>
+                    <td>
+                        <input type="button" value="Guardar Datos" onclick="inputData()">
+                        <input type="button" value="Añadir alumno nuevo" onclick="addOtherAlumn()">
+                        <input type="button" value="Mostrar Datos" onclick="showData()">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <p id="datos"></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="a06ua_ajmg.js"></script>
+
+</body>
+</html>

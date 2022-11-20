@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>a01u4_ajmg</title>
+    <link rel="stylesheet" type="text/css" href="a01u4_ajmg.css" media="screen" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>a01u4_ajmg</h1>
+        <div class="card">
+            <div class="card-header">
+                <h4>Introduzca precio y tipo de artículo</h4>
+            </div>
+            <div class="card-body">
+                <select id="tipo">
+                    <option value=""></option>
+                    <option value="1">Tipo 1</option>
+                    <option value="2">Tipo 2</option>
+                    <option value="3">Tipo 3</option>
+                </select>
+                <input type="number" id="pr" placeholder="Precio...">
+                <button class="btn-primary" onclick="obtenerImporteConImpuestos(pr, tipo)">Mostar</button>
+            </div>
+            <br>
+            <div class="card-footer">
+                <p id="res"></p>
+            </div>
+        </div>
+    </div>
+    <script src="a01u4_ajmg.js"></script>
+</body>
+
+</html>

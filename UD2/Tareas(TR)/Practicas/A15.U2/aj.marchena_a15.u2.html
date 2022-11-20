@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            width: 85%;
+            border: 2px solid #f0ebeb;
+            border-radius: 7px;
+            background-color: #000000;
+            box-shadow: Opx 0px 15px #86514d;
+            padding: 10px;
+            color: white;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div align="center">
+        <table border="2">
+            <tr>
+                <td colspan="3" align="center">
+                    Convierte a...<br />
+                    <input type="text" id="npt">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    String: <br />
+                    <p id="strng"></p>
+                </td>
+                <td>
+                    Booleano: <br />
+                    <p id="bl"></p>
+                </td>
+                <td>
+                    Número: <br />
+                    <p id="nmbr"></p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" align="center">
+                    <input type="button" value="Convertir" onclick="si()">
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+
+        function nptg() {
+            var x = document.getElementById("npt").value.split(" ");
+            return x[0].toLowerCase();
+        }
+
+        function toNumber() {
+            var r = nptg();
+            (r == "true") ? r = 1 : (r == "false") ? r = 0 : (isNaN(Number(r))) ? r = "No se puede convertir" : r = Number(r);
+            return r;
+        }
+
+        function toBoolean() {
+            var r = nptg();
+            if (r == "0" || r == "false") {
+                r = false;
+            } else if (r == "1" || r == "true") {
+                r = true
+            } else {
+                r = "No se puede convertir";
+            }
+            return r;
+        }
+
+        function cleaner() {
+            document.getElementById("strng").innerHTML = "";
+            document.getElementById("nmbr").innerHTML = "";
+            document.getElementById("bl").innerHTML = "";
+        }
+
+        function si() {
+            cleaner();
+            var s = nptg();
+            console.log(s);
+            document.getElementById("strng").innerHTML = s;
+            var n = toNumber();
+            console.log(n);
+            document.getElementById("nmbr").innerHTML = n;
+            var b = toBoolean();
+            console.log(b);
+            document.getElementById("bl").innerHTML = b;
+        }
+    </script>
+</body>
+
+</html>

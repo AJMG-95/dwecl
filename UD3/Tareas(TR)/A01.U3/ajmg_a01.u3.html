@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de dias hasta fin de año</title>
+</head>
+
+<body>
+    <div align="center">
+        <table border="1">
+            <th>
+                Días hasta fin de año:
+            </th>
+            <tr>
+                <td>
+                    <p id="result" align="center"></p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script Languaje="javascript">
+
+        var currentDate = new Date();
+        var yearEnd = new Date(2022, 11, 31);
+        var msecUntilEnd = yearEnd - currentDate;
+        var msecPerMinute = 1000 * 60;
+        var msecPerHour = msecPerMinute * 60;
+        var msecPerDay = msecPerHour * 24;
+        var days = Math.floor(msecUntilEnd / msecPerDay);
+        document.getElementById('result').innerHTML = days;
+
+    </script>
+</body>
+
+</html>

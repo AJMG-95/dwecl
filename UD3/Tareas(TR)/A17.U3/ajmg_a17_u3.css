@@ -1,0 +1,50 @@
+html,
+body {
+    margin: 0.2cm;
+    padding: 0.2cm;
+    width: 100%;
+    height: 100%;
+    background:#decfe5
+}
+
+textarea {
+    width: 200px;
+    height: 200px;
+    resize: none;
+    border: 1px solid black;
+    margin: 0.2cm;
+    padding: 0.2cm;
+    border-radius: 0.2cm;
+    background-color: white;
+    font-family: monospace;
+    font-size: 10pt;
+    font-weight: bold;
+    color: black;
+    resize: none;
+    box-shadow: 0px 0px 10px black;
+}
+
+button {
+    width: "200px";
+    border: 4px solid #af44e4 ;
+    border-radius: 7px;
+    background-color: #33014b;
+    box-shadow: 2px 2px 15px #dbbaeb;
+    padding: 10px;
+    color: white;
+    margin-bottom: 5px;
+    cursor: pointer;
+    font-family: monospace;
+    font-size: 12pt;
+
+}
+
+button:focus {
+    outline: none !important;
+}
+
+ul{
+    padding: 0;
+    list-style-type: none;
+    font-size: large;
+}

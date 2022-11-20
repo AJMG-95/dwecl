@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div align="center">
+        <h2>EVEN or ODD</h2>
+
+        <input type="number" id="npt" onkeyup="esPar()" onclick="esPar()">
+
+        <p>The number is...</p>
+        <p id="res"></p>
+
+        <script>
+            function getInput() {
+                var numero = document.getElementById("npt").value;
+                return Number(numero);
+            }
+
+            function esPar() {
+                var n = getInput();
+                var r;
+                ((n % 2) == 0) ? r = 'even' : r = 'odd';
+                document.getElementById("res").innerHTML = r;
+            }
+        </script>
+    </div>
+</body>
+
+</html>

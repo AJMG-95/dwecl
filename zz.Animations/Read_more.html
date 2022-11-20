@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+
+        <style>
+            img {
+                cursor: pointer;
+                width: 260px;
+                height: 155px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+
+            .container2 {
+                position: relative;
+                text-align: center;
+                color: white;
+            }
+
+            .centered {
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: none;
+            }
+
+            img:hover.centered {
+                display: block;
+            }
+
+            .container2:hover>img {
+                opacity: 0.6 !important;
+                transition: opacity 0.4s;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <div className="wrapper">
+            <div>
+                <div class="container2">
+                    <img src="">
+
+                    <div class="centered"> Read more</div>
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

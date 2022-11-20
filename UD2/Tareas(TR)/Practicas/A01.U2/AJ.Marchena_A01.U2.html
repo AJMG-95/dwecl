@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Comprobador de notas</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!--  -->
+    Introduzca la nota: <input type="number" id="n" />
+
+    <input type="button" id="button" onClick="nota()" value="comprobar">
+
+    <p id="r"></p>
+
+
+    <script>
+        var res;
+        /**
+        Toma el valor proporcionado por el usuario y lo traspone a una
+        clasificacción no numérica.
+        */
+        function nota() {
+            var nt = parseInt(document.getElementById("n").value);
+
+            res = (nt < 0) ? "La nota debe ser un valor positivo."
+                : (nt < 5) ? "Suspenso" : (nt < 7) ? "Aprobado" : (nt < 9) ? "Notable" : "Sobresaliente";
+
+            document.getElementById("r").innerHTML = "<strong>Se considera: <strong/>" + res;
+
+        }
+    </script>
+</body>
+
+</html>

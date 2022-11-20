@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="contenedor">
+        <table border="1" al>
+                <table border="1" width="500px">
+                    <tr id="nombre"></tr>
+                </table>
+                <table border="1" width="500px">
+                    <tr id="edad"></tr>
+                </table>
+        </table>
+    </div>
+    <script>
+        do {
+            var nombre = prompt("Introduce tu nombre:");
+            var edad = prompt("Introduce tu edad:");
+
+        } while (nombre == "" || edad == "" || edad < 0 || isNaN(edad)) {
+            if (nombre == undefined) {
+                console.error("El usuario introdujo un nombre incorrecto");
+                alert("Nombre incorrecto");
+
+            }
+            }
+
+            if (edad < 0 || isNaN(edad) || edad == "") {
+                console.error("El usuario introdujo un dato incorrecto");
+                alert("Edad incorrecta");
+
+            }
+
+        document.getElementById("nombre").innerHTML = ("<p align='center'>Bien Venido: " + nombre + "</p>");
+        document.getElementById("edad").innerHTML = ("<p align='center'>Su edad es: " + edad + "</p>");
+
+
+        var c = confirm("Son corresctos sus datos?");
+
+        if(c) {
+            document.write("Tarea finalizada");
+        }
+
+    </script>
+</body>
+
+</html>

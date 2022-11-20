@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Number Deleter</h2>
+
+    Input here: <input type="text" id="wrds">
+
+    <input type="button" id="button" value="start" onClick="nmbrdltr()">
+
+    <h3 id="str"></h3>
+
+    <script>
+
+        /**
+            This function removes spaces and numbers from a string given by
+            the user and returns each letter in a different alert message.
+         */
+        function nmbrdltr() {
+            var str = document.getElementById("wrds").value.split("") ;
+            for (e in str) {
+                if(isNaN(str[e]))
+                    alert(str[e]);
+                }
+            }
+
+    </script>
+</body>
+</html>

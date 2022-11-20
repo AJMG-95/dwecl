@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        JavaScript comprueba si el año es bisiesto
+    </title>
+</head>
+
+<body>
+    Introduzca el año: <input type="text" id = "anyo"/>
+
+    <input type="button" id="button" onClick="esbisiesto()"
+            value="comprobar">
+
+    <p id="result"></p>
+
+
+    <script>
+        function esbisiesto() {
+            var anyo= document.getElementById("anyo").value;
+
+            var res = (anyo % 100 === 0) ? (anyo % 400 === 0)
+                                    : (anyo % 4 === 0);
+
+            (res === true) ? document.getElementById('result').innerHTML = 'Es bisiesto'
+                            :document.getElementById('result').innerHTML = 'No es bisiesto'
+
+        }
+    </script>
+</body>
+
+</html>

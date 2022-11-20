@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Factorial</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Calculadora factorial</h1>
+
+    Indique el valor: <input type="number" id="n">
+
+    <input type="button" id="b" value="Calcular" onClick="fact()">
+
+    <p id="r"></p>
+
+    <script>
+
+        /**
+        Toma el valor proporcionado por el usuario y muestra el
+        valor del calculo del factorial del mismo
+        */
+        function fact() {
+            var input = document.getElementById("n").value;
+            var aux1 = input;
+            var aux2 = 1;
+            for(i = 1; i <= input; i++) {
+                aux2 *= aux1;
+                aux1--;
+            }
+
+            document.getElementById("r").innerHTML = "<strong>El resultado es: <strong/>" + aux2;
+
+        }
+
+    </script>
+
+</body>
+
+</html>

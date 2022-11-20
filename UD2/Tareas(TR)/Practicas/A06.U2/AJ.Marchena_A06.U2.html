@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--No es un fallo es parte del diseño de la web-->
+    <h2>Cu3nt4 dígit0s</h2>
+
+    Introduzca el dígito aquí: <input type="text" id="nmbr">
+
+    <input type="button" id="button" value="Contar" onClick="show()">
+
+    <script>
+
+        //Muestra los digitos por separdo en distintos alerts.
+        function show() {
+            var nmbr = document.getElementById("nmbr").value;
+            if (nmbr < 1000) {
+                for (i = 0; i < nmbr.length; i++) {
+                    alert(nmbr[i]);
+                }
+            } else {
+                alert("El número debe ser inferior a 1000")
+            }
+        }
+    </script>
+
+</body>
+
+</html>
