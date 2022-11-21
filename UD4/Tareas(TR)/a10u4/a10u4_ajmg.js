@@ -2,14 +2,14 @@ class vehicle {
     static countInstaces = 0;
 
 
-    constructor(brand, model, color, year, carDisplacement, engineOn = false, speed) {
+    constructor(brand, model, color, year, carDisplacement, speed, engineOn = false) {
         this.brand = brand;
         this.model = model;
         this.color = color;
         this.year = year;
         this.displacement = carDisplacement;
-        this.engineOn = engineOn;
         this.speed = speed;
+        this.engineOn = engineOn;
         this.instanceId = ++vehicle.countInstaces;
         this.properties = Object.keys(this);
     }
@@ -69,14 +69,16 @@ class vehicle {
 
         for (let i = 0; i < vehicle.countInstaces - 1; i++) {
             const tr = tbl.insertRow();
-            for (let j = 0; j <= this.properties.length - 1; j++) {
-                if (this.properties[j] != "instanceId" && this.properties[j] != "properties") {
+            this.properties.forEach(element => {
+                if (element != "instanceId") {
                     const td = tr.insertCell();
-                    let prop = this.properties[j];
+                    let prop = element;
                     let h3 = td.appendChild(document.createElement('h3'));
                     let p = td.appendChild(document.createElement('p'));
                     h3.appendChild(document.createTextNode(prop));
-                    p.appendChild(document.createTextNode(this[prop]));
+                    let node = document.createTextNode(this[prop])
+                    node == undefined ? p.appendChild("") : p.appendChild(node);
+
                     td.style.border = '2px solid black';
                     td.style.textAlign = 'center';
                     td.style.padding = '10px';
@@ -87,17 +89,16 @@ class vehicle {
                         h3.style.backgroundColor = this[prop] ? "green" : "red";
                     }
                 }
-            }
+            })
         }
-
         body.appendChild(tbl);
     }
 }
 
 
-var coche1 = new vehicle("Mazda", "cX-5", "blaco", "2022", 2000,);
-var coche2 = new vehicle("Ford", "Puma", "Azul", "2022", 4500, true, 200);
+const coche1 = new vehicle("Mazda", "cX-5", "blaco", "2022", 2000,),
+        coche2 = new vehicle("Ford", "Puma", "Azul", "2022", 4500, 200, true);
 
 
-coche1.showTableOfDates()
+coche1.showTableOfDates();
 coche2.showTableOfDates()
