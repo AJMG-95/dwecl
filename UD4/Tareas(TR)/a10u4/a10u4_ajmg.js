@@ -69,21 +69,27 @@ class vehicle {
 
         for (let i = 0; i < vehicle.countInstaces - 1; i++) {
             const tr = tbl.insertRow();
-            for (let j = 0; j <= this.properties.length - 2; j++) {
-                const td = tr.insertCell();
-                var prop = this.properties[j];
-                var h3 = td.appendChild(document.createElement('h3'));
-                var p = td.appendChild(document.createElement('p'));
-                h3.appendChild(document.createTextNode(prop));
-                p.appendChild(document.createTextNode(this[prop]));
-                td.style.border = '2px solid black';
-                td.style.textAlign = 'center';
-                td.style.padding = '10px'
-                h3.style.border = '2px solid black';
-                h3.style.padding = '20px'
-                h3.style.margin = 'auto';
+            for (let j = 0; j <= this.properties.length - 1; j++) {
+                if (this.properties[j] != "instanceId" && this.properties[j] != "properties") {
+                    const td = tr.insertCell();
+                    let prop = this.properties[j];
+                    let h3 = td.appendChild(document.createElement('h3'));
+                    let p = td.appendChild(document.createElement('p'));
+                    h3.appendChild(document.createTextNode(prop));
+                    p.appendChild(document.createTextNode(this[prop]));
+                    td.style.border = '2px solid black';
+                    td.style.textAlign = 'center';
+                    td.style.padding = '10px';
+                    h3.style.border = '2px solid black';
+                    h3.style.padding = '20px';
+                    h3.style.margin = 'auto';
+                    if(prop == "engineOn") {
+                        h3.style.backgroundColor = this[prop] ? "green" : "red";
+                    }
+                }
             }
         }
+
         body.appendChild(tbl);
     }
 }
