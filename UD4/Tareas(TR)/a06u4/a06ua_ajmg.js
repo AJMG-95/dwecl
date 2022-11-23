@@ -4,20 +4,20 @@ var alumnNotes = [];
 
 
 function getAlumnName() {
-    var alumnNameInput = document.getElementById('alumname').value;
+    let alumnNameInput = document.getElementById('alumname').value;
     alumnNameInput !== "" ? alumnName.push(alumnNameInput) : alert("Debe introducir un nombre");
 }
 
 function getAlumnNote() {
-    var alumnNote1 = document.getElementById('alumnNote1').value;
-    var alumnNote2 = document.getElementById('alumnNote2').value;
-    var alumnNote3 = document.getElementById('alumnNote3').value;
+    let alumnNote1 = document.getElementById('alumnNote1').value;
+    let alumnNote2 = document.getElementById('alumnNote2').value;
+    let alumnNote3 = document.getElementById('alumnNote3').value;
     alumnNotes.push(alumnNote1, alumnNote2, alumnNote3);
     alumnNotes.forEach(element => { parseFloat(element) });
 }
 
 function notesAreCorrect() {
-    var correct = [];
+    let correct = [];
     alumnNotes.forEach(element => { correct.push(element >= 0 && element <= 10 ? true : false) });
     return correct.includes(false) ? false : true;
 }
@@ -44,7 +44,7 @@ function checkAndCreateAlumnList() {
         alumnName = [];
     }
     if (alumnName.length != 0) {
-        var alumnDates = alumnName + ": " + (alumnNotes.join(", "));
+        let alumnDates = alumnName + ": " + (alumnNotes.join(", "));
         alumnsDateList.push(alumnDates);
     }
     alumnNotes = [];

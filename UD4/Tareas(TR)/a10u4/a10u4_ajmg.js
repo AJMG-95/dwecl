@@ -16,7 +16,7 @@ class vehicle {
 
 
     getDates() {
-        var carDates = `Marca: ${this.brand}\nModelo: ${this.model}\nColor: ${this.color}\nAño: ${this.year}`;
+        let carDates = `Marca: ${this.brand}\nModelo: ${this.model}\nColor: ${this.color}\nAño: ${this.year}`;
         if (this.speed) { carDates += `\nVelocidad: ${this.speed}Km/h` };
         alert(carDates);
     }
